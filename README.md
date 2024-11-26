@@ -61,8 +61,10 @@ dingding_token = '申请钉钉群助手的token'   # 强烈建议您使用 （�
 2. 安装依赖包
 '''
 pip install requests
-cp app/authorization_example.py app/authorization.py
 '''
+```
+cp app/authorization_example.py app/authorization.py
+```
 
 3. 修改data/data.json配置文件  （参数详细解读->[一定要看](https://github.com/hengxuZ/binance-quantization/blob/master/dev-ReadMe.md)）
 ```
