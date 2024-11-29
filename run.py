@@ -74,8 +74,9 @@ class RunMain:
     async def loop_run(self):
         """多线程异步运行"""
         with ThreadPoolExecutor(max_workers=3) as executor:  # 最多运行 3 个线程
-            loop = asyncio.get_event_loop()
-            tasks = [loop.run_in_executor(executor, self.run_for_coin, coin) for coin in self.coinList]
+            # loop = asyncio.get_event_loop()
+            # tasks = [loop.run_in_executor(executor, self.run_for_coin, coin) for coin in self.coinList]
+            tasks = [self.run_for_coin(coin) for coin in self.coinList]  # 直接创建协程任务
             await asyncio.gather(*tasks)
 
 
